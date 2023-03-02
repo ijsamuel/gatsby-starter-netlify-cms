@@ -12,8 +12,8 @@ import FullWidthImage from "../components/FullWidthImage";
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
-  subheading,
+  //heading,
+  //subheading,
   mainpitch,
   description,
   intro,
@@ -22,7 +22,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <FullWidthImage img={heroImage} title={title} /*subheading={subheading}*/ />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -77,8 +77,8 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  //heading: PropTypes.string,
+  //subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -94,8 +94,8 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        //heading={frontmatter.heading}
+        //subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -124,8 +124,6 @@ export const pageQuery = graphql`
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
-        heading
-        subheading
         mainpitch {
           title
           description
@@ -140,7 +138,6 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
           description
         }
       }
