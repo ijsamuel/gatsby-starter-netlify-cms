@@ -1,6 +1,5 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
 image: /img/banner_2.jpg
 mainpitch:
   title: Why Kaldi
