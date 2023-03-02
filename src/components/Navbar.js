@@ -39,7 +39,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container" color="red">
+        <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="POWS|JamesSamuel"  />
@@ -81,6 +81,13 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </div>
+        <style jsx>
+        {`
+          .navbar {
+            color: red;
+          }
+        `}
+      </style>
       </nav>
     );
   }
